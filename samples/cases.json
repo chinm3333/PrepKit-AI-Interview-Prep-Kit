@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-01",
+    "jd": "Senior Backend Engineer\n\nWe are looking for an engineer with 5+ years of Node.js experience. Must have strong system design skills and experience mentoring junior engineers. Nice to have: Kafka experience.\n\nResponsibilities:\n- Design and build APIs\n- Own services in production\n- Mentor teammates",
+    "company_url": "https://about.gitlab.com/",
+    "days": 5
+  },
+  {
+    "id": "case-thin",
+    "jd": "Software Engineer\nApply now.",
+    "company_url": "https://example.com/",
+    "days": 3
+  },
+  {
+    "id": "case-oneday",
+    "jd": "Frontend Engineer\n\nRequired: React, TypeScript, accessibility. Preferred: GraphQL.\nBuild UI features and collaborate with design.",
+    "company_url": "https://posthog.com/",
+    "days": 1
+  },
+  {
+    "id": "case-long",
+    "jd": "Platform Engineer\n\nMust have: Kubernetes, Terraform, observability (Prometheus/Grafana), on-call experience.\nNice to have: Go, Kafka.\nYou will own CI/CD and developer platforms.",
+    "company_url": "https://about.gitlab.com/",
+    "days": 60
+  },
+  {
+    "id": "case-bad-url",
+    "jd": "Backend Engineer\n\nRequired: Python, SQL, REST APIs. Nice to have: Docker.",
+    "company_url": "https://this-domain-definitely-does-not-exist-trao-test.invalid/",
+    "days": 4
+  }
+]

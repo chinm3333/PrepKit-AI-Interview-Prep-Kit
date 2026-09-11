@@ -1,0 +1,24 @@
+{
+  "name": "interview-prep-kit",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @trao/api\" \"npm run dev -w @trao/web\"",
+    "dev:api": "npm run dev -w @trao/api",
+    "dev:web": "npm run dev -w @trao/web",
+    "build": "npm run build -w @trao/pipeline && npm run build -w @trao/api && npm run build -w @trao/web",
+    "test": "npm run test -w @trao/pipeline",
+    "evaluate": "npm run evaluate -w @trao/pipeline --"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

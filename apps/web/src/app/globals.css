@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0a0f1a;
+  --mist: #f4f7f8;
+  --pine: #0d7a6f;
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  color: var(--ink);
+  background-color: #f4f7f8;
+  background-image:
+    radial-gradient(ellipse 900px 520px at 12% -8%, rgba(13, 122, 111, 0.14), transparent 55%),
+    radial-gradient(ellipse 700px 480px at 92% 0%, rgba(18, 24, 38, 0.06), transparent 50%),
+    radial-gradient(ellipse 600px 400px at 50% 100%, rgba(13, 122, 111, 0.06), transparent 55%),
+    linear-gradient(180deg, #f7fafb 0%, #eef3f5 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  opacity: 0.035;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(13, 122, 111, 0.22);
+}
+
+@layer components {
+  .focus-ring:focus-visible {
+    @apply outline-none ring-2 ring-pine ring-offset-2 ring-offset-mist-50;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-pine px-5 py-2.5 text-sm font-semibold text-white transition duration-200 hover:bg-pine-deep disabled:opacity-55;
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border border-ink-900 border-opacity-10 bg-white bg-opacity-70 px-4 py-2.5 text-sm font-medium text-ink-900 backdrop-blur-sm transition hover:bg-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm text-ink-700 transition hover:text-ink-950;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(10, 15, 26, 0.05);
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-ink-900 border-opacity-10 bg-white bg-opacity-80 px-3.5 py-2.5 text-sm text-ink-950 shadow-soft backdrop-blur-sm transition placeholder:text-ink-500;
+  }
+
+  .input-field:hover {
+    @apply border-opacity-20;
+  }
+
+  .input-field:focus {
+    @apply outline-none ring-2 ring-pine ring-offset-2 ring-offset-mist-50;
+    border-color: rgba(13, 122, 111, 0.4);
+  }
+
+  .surface {
+    @apply rounded-2xl border border-ink-900 border-opacity-10 bg-white bg-opacity-70 shadow-lift backdrop-blur-md;
+  }
+
+  .surface-quiet {
+    @apply rounded-xl border border-ink-900 border-opacity-10 bg-white bg-opacity-50;
+  }
+
+  .label-text {
+    @apply mb-1.5 block text-[11px] font-semibold uppercase tracking-widest text-ink-600;
+  }
+
+  .page-title {
+    @apply font-display text-4xl leading-tight tracking-tight text-ink-950 sm:text-5xl;
+  }
+
+  .page-lede {
+    @apply mt-3 max-w-xl text-base leading-relaxed text-ink-700 sm:text-lg;
+  }
+
+  .status-chip {
+    @apply inline-flex items-center rounded-md px-2 py-1 text-[11px] font-semibold uppercase tracking-wide;
+  }
+
+  .nav-link {
+    @apply rounded-lg px-3 py-2 text-sm font-medium text-ink-700 transition hover:text-ink-950;
+  }
+
+  .nav-link:hover {
+    background: rgba(10, 15, 26, 0.05);
+  }
+
+  .nav-link-active {
+    @apply bg-ink-950 text-mist-50 hover:bg-ink-900 hover:text-mist-50;
+  }
+
+  .tab-btn {
+    @apply rounded-lg px-3 py-2 text-sm font-medium text-ink-700 transition;
+  }
+
+  .tab-btn:hover {
+    background: rgba(10, 15, 26, 0.05);
+  }
+
+  .tab-btn-active {
+    @apply bg-ink-950 text-mist-50;
+  }
+
+  .shimmer-bar {
+    background: linear-gradient(
+      90deg,
+      rgba(13, 122, 111, 0.25) 0%,
+      rgba(13, 122, 111, 0.85) 50%,
+      rgba(13, 122, 111, 0.25) 100%
+    );
+    background-size: 200% 100%;
+    @apply animate-shimmer;
+  }
+}
