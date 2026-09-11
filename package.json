@@ -7,8 +7,8 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w @trao/api\" \"npm run dev -w @trao/web\"",
-    "dev:api": "npm run dev -w @trao/api",
+    "dev": "npm run build -w @trao/pipeline && concurrently -n pipeline,api,web -c magenta,blue,green \"npm run dev -w @trao/pipeline\" \"npm run dev -w @trao/api\" \"npm run dev -w @trao/web\"",
+    "dev:api": "npm run build -w @trao/pipeline && concurrently -n pipeline,api -c magenta,blue \"npm run dev -w @trao/pipeline\" \"npm run dev -w @trao/api\"",
     "dev:web": "npm run dev -w @trao/web",
     "build": "npm run build -w @trao/pipeline && npm run build -w @trao/api && npm run build -w @trao/web",
     "test": "npm run test -w @trao/pipeline",
