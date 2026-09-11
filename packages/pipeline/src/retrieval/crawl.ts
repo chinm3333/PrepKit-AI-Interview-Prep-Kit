@@ -33,6 +33,7 @@ export interface CrawlResult {
 const HIRING_HINTS =
   /careers?|jobs?|hiring|join.?us|work.?with.?us|life.?at|handbook|engineering.?blog|how.?we.?hire|interview|recruit/i;
 
+const ABOUT_HINTS = /about|about.?us|our.?company|company|who.?we.?are|mission|story/i;
 const fetchLimiter = new RateLimiter(400);
 
 function envInt(name: string, fallback: number): number {
