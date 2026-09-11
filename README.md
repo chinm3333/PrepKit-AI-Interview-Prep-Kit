@@ -186,3 +186,9 @@ Confidence-weighted queue: unseen cards first, then lowest confidence (1–5), t
 ## Environment variables
 
 See `.env.example` for every variable and what it does.
+
+### DEMO
+(PrepKit Demo)[https://www.loom.com/share/411687f654fc431d834f6a0c4f2acd91]
+
+### LIVE
+(Prepkit live)[https://prepkit-two.vercel.app/kits/6aa4677106d2a873bfccf80b]
